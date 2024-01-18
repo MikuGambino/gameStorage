@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Добавление игры</title>
+</head>
+<body id="gameAddFormBody">
+    <nav><a class="logo" href="../../index.html">GameStorage</a><a href="../../index.html">Вернуться на главную</a></nav>
+    <iframe name="votar" style="display:none;"></iframe>
+    <form id="addGame" onsubmit="createGame()" target="votar">
+        <label for="titleInput">Название игры*</label>
+        <input id="titleInput" type="text" required>
+        <label for="descTextArea">Описание игры*</label>
+        <textarea name="descTextArea" id="descTextArea" rows="5" required></textarea>
+        <label for="priceInput">Цена*</label>
+        <input id="priceInput" type="number" min="0" step="0.01" required>
+        <p>Платформы</p>
+        <div class="checkboxContainer">
+            <div class="checkboxElement">
+                <input type="checkbox" id="Windows" name="platformCheckbox" value="Windows">
+                <label for="Windows">Windows</label>
+            </div>
+            <div class="checkboxElement">
+                <input class="chk" type="checkbox" id="Xbox Series X/S" name="platformCheckbox" value="Xbox Series X/S">
+                <label for="Xbox Series X/S">Xbox Series X/S</label>
+            </div>
+            <div class="checkboxElement">
+                <input type="checkbox" id="Playstation 5" name="platformCheckbox" value="Playstation 5">
+                <label for="Playstation 5">Playstation 5</label>
+            </div>
+            <div class="checkboxElement">
+                <input type="checkbox" id="Nintendo Switch" name="platformCheckbox" value="Nintendo Switch">
+                <label for="Nintendo Switch">Nintendo Switch</label>
+            </div>
+            <div class="checkboxElement">
+                <input  type="checkbox" id="Xbox One" name="platformCheckbox" value="Xbox One">
+                <label for="Xbox One">Xbox One</label>
+            </div>
+            <div class="checkboxElement">
+                <input type="checkbox" id="Playstation 4" name="platformCheckbox" value="Playstation 4">
+                <label for="Playstation 4">Playstation 4</label>
+            </div>
+        </div>
+        <label for="date">Дата выхода</label>
+        <input type="date" id="date">
+        <label for="genreInput">Жанр</label>
+        <input id="genreInput" type="text">
+        <label for="webSiteInput">Сайт игры</label>
+        <input id="webSiteInput" type="text">
+        <label for="ageRatingInput">Возрастной рейтинг</label>
+        <input id="ageRatingInput" type="text">
+        <label for="developerInput">Разработчик</label>
+        <input id="developerInput" type="text">
+        <label for="metacriticRateInput">Рейтинг метакритик</label>
+        <input id="metacriticRateInput" type="number" min="0" max="100">
+        <label for="image">Обложка игры</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+        <button type="submit">Добавить</button>
+    </form>
+    <script src="../../dist/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+ gamestorage-front:
+  image: gamestorage
+  ports:
+   - 8181:8181
+  restart: always
+  environment:
+   PORT: 8181

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Игры</title>
+</head>
+<body>
+    <nav><a class="logo" href="./index.html">GameStorage</a><a href="src/html/gameAddForm.html">Добавить игру</a></nav>
+    <div class="container-index">
+        <div id="games">
+        </div>
+        <div class="params">
+            <div class="filters" id="filters">
+                <h2>Фильтры</h2>
+            </div>
+            <div class="sorting">
+                <label for="sortBy">Сортировка:</label>
+                <select name="sortBy" id="sortBy">
+                    <option value="title" selected>По алфавиту</option>
+                    <option value="release" >По дате выхода</option>
+                    <option value="rate" >По пользовательскому рейтингу</option>
+                    <option value="metacriticRate">По рейтингу Metacritic</option>
+                    <option value="price">По цене</option>
+                </select>
+                <label for="typeSort">Порядок сортировки:</label>
+                <select name="typeSort" id="typeSort">
+                    <option value="asc" selected>По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+            </div>
+            <button onclick="filter()" id="paramsButton">Применить</button>
+        </div>
+    </div>
+    <script src="dist/script.js"></script>
+</body>
+</html>

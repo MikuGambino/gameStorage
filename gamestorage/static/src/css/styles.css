@@ -1,0 +1,297 @@
+body{
+    margin: 0;
+    background-color: #E3FDFD;
+    font-family: 'Montserrat', sans-serif;
+}
+#games{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#games img{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+nav{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #71C9CE;
+}
+nav .logo{
+    font-size: 50px;
+}
+nav a{
+    margin: 0px 10%;
+    font-size: 18px;
+    color:black;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    margin: 0px 3%;
+    display: flex;
+}
+.container-index{
+    margin: 0px 3%;
+    display: flex;
+    margin-right: 0%;
+}
+.gameBlock{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    border: 1px solid black;
+    margin: 1%;
+    background-color: #CBF1F5;
+    border-radius: 20px;
+}
+#games img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+.params{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    background: #A6E3E9;
+    width: 20%;
+    padding-bottom: 2%;
+}
+.params input{
+    max-width: 65%;
+    margin: 1% 0px;
+}
+.params button{
+    width: 65%;
+}
+.params label{
+    margin: 1% 0px;
+}
+.params select{
+    margin: 2% 0px;
+    max-width: 65%;
+}
+.params div{
+    display: flex;
+    flex-direction: column;
+}
+.imgDesc{
+    display: flex;
+}
+.imgDesc img{
+    max-width: 50%;
+    margin-right: 3%;
+}
+.imgDesc p{
+    max-width: 85%;
+}
+.icoText{
+    display: flex;
+    flex-direction: row;
+}
+.icoText img{
+    max-width: 5%;
+}
+#addGame{
+    margin: 2vh 25vw;
+}
+#addGame button{
+    width: 90%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.reviews input, .reviews textarea, form input, .reviews input, .reviews button{
+    max-width: 30%;
+}
+.checkboxElement{
+    display: flex;
+    flex-direction: row;
+}
+.rating {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rating:not(:checked)>input {
+    display: none;
+}
+
+.rating:not(:checked)>label {
+    width: 40px;
+    cursor: pointer;
+    font-size: 40px;
+    color: lightgrey;
+    text-align: center;
+    line-height: 1;
+}
+
+.rating:not(:checked)>label:before {
+    content: '★';
+}
+
+.rating>input:checked~label {
+    color: gold;
+}
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: gold;
+}
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+    color: gold;
+}
+.container-column{
+    margin: 0px 5%;
+    display: flex;
+    flex-direction: column;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+}
+.ratingReview{
+    color: gold;
+    width: 30px;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    margin: 10px;
+    margin-left: 0px;
+}
+.params h2{
+    margin-left: 0%;
+}
+h2{
+    margin-left: 5%;
+    margin-bottom: 0px;
+}
+#games p{
+    font-size: 20px;
+    margin: 5%;
+}
+.buttonDiv{
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    justify-content: space-around;
+    padding-bottom: 5%;
+}
+button{
+    margin: 1% 0%;
+    background-color: #62B476;
+    border: 0px;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    width: 35%;
+}
+button:hover {
+    background-color: rgb(1, 136, 1);
+}
+.deleteButton{
+    background-color: #e17c7c;
+}
+.deleteButton:hover{
+    background-color: rgb(223, 57, 57);
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
+.container-column label, .container-column input, .container-column textarea{
+    margin-bottom: 0.5%;
+}
+.review{
+    border-top: 1px solid black;
+}
+
+#addGame label, #addGame input,
+#addGame textarea, #addGame button,
+#addGame p{
+    margin: 1% 5% 0%;
+}
+#addGame{
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #CBF1F5;
+    padding: 2%;
+}
+#addGame [type=checkbox]{
+    margin-right: 0px;
+}
+@media (max-width: 768px){
+    #games{
+        flex-direction: column;
+        width: 100%;
+    }
+    .gameBlock{
+        max-width: 100%;
+    }
+    .container-index{
+        margin: 0;
+        flex-direction: column-reverse;
+    }
+    .container-index form{
+        width: 100%;
+    }
+    nav .logo{
+        font-size: 25px;
+    }
+    nav a{
+        font-size: 15px;
+        margin: 0px 5%;
+    }
+    .params{
+        padding: 0 15%;
+    }
+    .imgDesc{
+        display: block;
+    }
+    .imgDesc img{
+        max-width: 100%;
+    }
+    .reviews{
+        max-width: 90%;
+    }
+    .reviews input, .reviews textarea, form input, .reviews input, .reviews button, .reviews label{
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .reviews button{
+        margin-bottom: 5%;
+    }
+    #addGame{
+        margin: 2vh 2vw;
+    }
+    #addGame button{
+        margin-top: 3%;
+    }
+}
